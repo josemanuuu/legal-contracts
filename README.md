@@ -194,5 +194,5 @@ The following information was requested to AI tools:
 - **Docker Configuration** (Deepseek): Assistance creating Dockerfile for Vue frontend application
 - **.NET Core Information** (ChatGPT): LTS version details and Entity Framework migration commands
 - **API Documentation** (Copilot): Swagger/OpenAPI implementation guidance for .NET Core
-- **Testing**: Request for comprehensive test cases for the LegalContractsController API endpoints
+- **Testing** (Copilot): Request for comprehensive test cases for the LegalContractsController API endpoints
 - **Database Management** (ChatGPT): PostgreSQL migration commands and best practices with Entity Framework Core
