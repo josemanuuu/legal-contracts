@@ -1,0 +1,41 @@
+services:
+  db:
+    container_name: general-db
+    platform: linux/amd64
+    restart: "no"
+    ports:
+      - "5432:5432"
+    image: postgres:16.3-alpine
+    env_file: .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - general-db-data:/var/lib/postgresql/data/pgdata
+
+  backend:
+    container_name: legal-contracts-backend
+    build:
+      context: ./legal-contracts-back
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    env_file: .env
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=mydb;Username=postgres;Password=postgres
+
+  frontend:
+    container_name: legal-contracts-frontend
+    build:
+      context: ./legal-contracts-front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  general-db-data:
