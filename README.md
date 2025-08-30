@@ -177,13 +177,22 @@ docker-compose up -d
 ```
 
 ## AI Use:
-The project was created with AI support on multiple aspect, primarly AI was use as an assistance to speed up and know specific points:
+The project was created with AI support on multiple aspect, primarly AI was use as an assistance to speed up and know specific points.
 
-- **Documentation Creation**: Comprehensive README generation for both backend (.NET Core 8 + Entity Framework) and full-stack application (including frontend + Docker setup) based on pre-documentation created by myself.
-- **Technology Comparisons**: Vue vs React comparison, Vuetify vs Material-UI equivalents, and testing approaches
-- **Asistance while doing Vue Frontend**: Since I have never developed on Vue, I use AI to help me understanding code and assist me 'translating' from React approach to Vue.
-- **Docker Configuration**: Assistance creating Dockerfile for Vue frontend application
-- **.NET Core Information**: LTS version details and Entity Framework migration commands
-- **API Documentation**: Swagger/OpenAPI implementation guidance for .NET Core
+Main tools used where:
+- ChatGPT
+- Copilot
+- Deepseek
+
+The way I use the AI agents are asked very specific questions with as much context as I can. Then read carefully what they have answered and then check if it is reasonable or not. Sometimes I double check on google for specific things AI said. When using for coding or documenting, always is reviewed the code, never use copy-paste directly. For documenting I always document myself and then use AI to improve it.
+
+The following information was requested to AI tools:
+
+- **Documentation Creation** (Deepseek): Comprehensive README generation for both backend (.NET Core 8 + Entity Framework) and full-stack application (including frontend + Docker setup) based on pre-documentation created by myself.
+- **Technology Comparisons** (ChatGPT): Vue vs React comparison, Vuetify vs Material-UI equivalents, and testing approaches
+- **Asistance while doing Vue Frontend** (Copilot): Since I have never developed on Vue, I use AI to help me understanding code and assist me 'translating' from React approach to Vue.
+- **Docker Configuration** (Deepseek): Assistance creating Dockerfile for Vue frontend application
+- **.NET Core Information** (ChatGPT): LTS version details and Entity Framework migration commands
+- **API Documentation** (Copilot): Swagger/OpenAPI implementation guidance for .NET Core
 - **Testing**: Request for comprehensive test cases for the LegalContractsController API endpoints
-- **Database Management**: PostgreSQL migration commands and best practices with Entity Framework Core
+- **Database Management** (ChatGPT): PostgreSQL migration commands and best practices with Entity Framework Core
